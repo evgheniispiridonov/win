@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-import os
+
 
 
 API_TOKEN = '871426689:AAHjCbL5mmk_NyJWj9G_OhQxUjf1-T-jMzU'
@@ -23,9 +23,6 @@ def send_welcome(message):
                                    "Обменdsfgdsgsdfgel.                                                          "
                                    "\U00002796\U00002796\U00002796\U00002796\U00002796\U00002796\U00002796\U00002796\U00002796\U00002796\U00002796\U00002796\U00002796                                                "
                                    "Выберите подходящий пункт меню: ", parse_mode="Markdown")
-def main():
-    port = os.getenv('PORT', default=8000)
-    updater.start_webhook(port=port)
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
